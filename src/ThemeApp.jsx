@@ -15,11 +15,11 @@ export function useApp() {
   return useContext(AppContent);
 }
 const ThemeApp = () => {
-  const [showFrom, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <ThemeProvider theme={theme}>
-      <AppContent.Provider value={{ showFrom, setShowForm }}>
+      <AppContent.Provider value={{ showForm, setShowForm }}>
         <App />
         <CssBaseline />
       </AppContent.Provider>

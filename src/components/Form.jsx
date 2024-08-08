@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import { useRef } from "react";
 
 const Form = ({ add }) => {
@@ -23,11 +23,10 @@ const Form = ({ add }) => {
           fullWidth
           multiline
           sx={{ mb: 1 }}
-        >
-          <Button variant="contained" type="submit">
-            Post
-          </Button>
-        </TextField>
+        />
+        <Button variant="contained" type="submit">
+          Post
+        </Button>
       </Box>
     </form>
   );

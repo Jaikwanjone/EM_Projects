@@ -18,7 +18,7 @@ export default function App() {
   };
 
   const add = (content, name) => {
-    const id = data[0].id + 1;
+    const id = data[data.length - 1].id + 1;
     setData([{ id, content, name }, ...data]);
   };
 
@@ -27,7 +27,6 @@ export default function App() {
       <Header />
       <Container maxWidth="sm" sx={{ mt: 4 }}>
         {showForm && <Form add={add} />}
-
         {data.map((item) => {
           return <Item key={item.id} item={item} remove={remove} />;
         })}
